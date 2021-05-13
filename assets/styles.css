@@ -1,0 +1,153 @@
+:root {
+     --body-bg: #333940;
+     --pink: #e867ed; 
+     --white: #ffffff;
+     --dark: #242424;
+}
+::selection {
+     background:var(--dark);
+}
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size:16px;
+     background: var(--body-bg);
+     margin:0 10px;
+     line-height:1.5;
+}
+p {
+     font-size:.8rem;
+}
+header {
+     display:flex;
+     flex-direction: column;
+     justify-content: center;
+     color: var(--white);
+     width:100%;
+     margin: 0 auto;
+     text-align: center;
+     padding: 10% 0
+}
+h1 { 
+     color: var(--pink);
+     font-size: 2rem;
+     padding-bottom: .5rem;
+}
+h2 {
+     font-size: 1.7rem;
+     color:var(--pink);
+}
+
+.linear-gradient-background {
+     background: rgb(63,27,81);
+     background: -moz-linear-gradient(180deg, rgba(232,102,236,.3) 0%, rgba(232,102,236,.6) 100%);
+     background: -webkit-linear-gradient(180deg, rgba(232,102,236,.3) 0%, rgba(232,102,236,.6) 100%);
+     background: linear-gradient(180deg, rgba(232,102,236,.3) 0%, rgba(232,102,236,.6) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f1b51",endColorstr="#a055a7",GradientType=1);
+}
+.row {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     padding:10px;
+}
+.justify-center {
+     justify-content: center;
+   }
+   .card-column {
+     flex: 1 0 100%;
+     padding: 1.5rem;
+     /* when the screen resizes, make it so our columns don't jump in size */
+     transition: flex-basis 500ms linear;
+     margin-bottom: 1.5rem;
+   }
+main .card {
+     display:flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     min-height: 100%;
+     margin: 5% 0   ;
+     border: 1px var(--white) dotted;
+     padding: 40px 5px 5px;
+     width:100%;
+     outline-offset: -2px;
+     transition: all 0.5s ease-in-out;
+}
+main .card:hover {
+     box-shadow: inset 0 0 8px var(--pink), 0 0 15px var(--pink);
+     transition: all 0.5s ease-in-out;
+}
+/* main .card::hover,  */
+main .card::hover .card-title{
+     box-shadow: inset 0 0 8px var(--pink), 0 0 15px var(--pink);
+}
+main .card-title {
+     position:relative;
+     margin: -4rem 0 1.5rem 0;
+     border: var(--white) solid 1px;
+     border-radius: 5px;
+     padding:5px;
+     background: var(--body-bg); 
+     transition: all 0.5s ease-in-out;
+}
+
+main .card-body .code-block {
+     flex-grow: 1;
+}
+main .card-body {
+     position:relative;
+     padding-top:2%;
+}
+main .card-body p{
+     padding:2% 0;
+     text-align: left;
+     color: var(--pink);
+}
+pre {
+     display:flex;
+     flex-direction: column;
+     padding:5%;
+     color: white;
+     border-radius:8px;
+     font-family:monospace;
+     font-size:10px;
+     
+}
+pre ::selection {
+     background: coral;
+}
+.card-body pre:active {
+     user-select: all;
+}
+footer{
+     display:flex;
+     justify-content: center;
+     color:var(--pink);
+}
+footer span{
+     content: '❤️';
+     font-size: 1rem;
+}
+@media screen and (min-width:640px) {
+     .card-column {
+          flex: 0 0 50%;
+          max-width: 75%;
+        }
+     header {
+          width:50%;
+          padding: 2% 0
+     }
+    
+    
+}
+@media screen and (min-width:970px) {
+     .card-column {
+          flex: 0 0 33%;
+          max-width: 100%;
+        }
+     header {
+          width:50%;
+          padding: 2% 0
+     }
+    
+   
+}
